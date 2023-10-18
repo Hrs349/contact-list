@@ -41,17 +41,25 @@ function borrarcontacto(idContacto) {
 function imprimirlista() {
   console.log(listaContactos);
 }
+function editarContacto(listaC,id,idnumero,propiedad,valorPropiedad){
+  const lista = listaContactos.find(list => list[id]===idn)
+  if (lista ){ 
+    lista[propiedad]= valorPropiedad
+  }
+}
 
- agregarContacto({id: 4,
-    nombre: "Alberto",
-    apellidos: "Rojas",
-    telefono: +584162356987,
-    ubicaciones: {
-      ciudad: "El tigre",
-      direccion: "av. 5 de julio"}})
+//  agregarContacto({id: 4,
+//     nombre: "Alberto",
+//     apellidos: "Rojas",
+//     telefono: +584162356987,
+//     ubicaciones: {
+//       ciudad: "El tigre",
+//       direccion: "av. 5 de julio"}})
 
-imprimirlista()
+// imprimirlista()
 
-borrarcontacto(3)
+// borrarcontacto(3)
 
-imprimirlista()
+ imprimirlista()
+editarContacto(listaContactos,'id',2,'nombre','Juancho')
+console.log(listaContactos)
